@@ -1,0 +1,21 @@
+encoder: grouplin
+trunk:
+layers:
+  - backbone.stages.0
+  - backbone.stages.1
+  - backbone.stages.2
+  - backbone.stages.3
+embed_state: /root/autodl-tmp/code/43.algonauts23-CC/weights/group_pca_d-4096.pt
+proj_dim: 4096
+hidden_dim: 1024
+epochs: 6
+batch_size: 64
+lr: 1.0e-5
+weight_decay: 0.8
+dropout: 0.9
+crop_scale: 0.8
+min_lr_fraction: 0.0
+amp: true
+
+fine_tune: true
+freeze_patterns:
